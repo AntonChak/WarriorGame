@@ -1,0 +1,25 @@
+{
+  "step_0": {
+    "input_required": true,
+    "message": "Кто ты, путник?",
+    "validators": ["string_required"],
+    "post_process": ["create_character"]
+  },
+  "step_1": {
+    "input_required": false,
+    "params": ["character"],
+    "message": "Привет, {character.name}.\nМеня зовут Карпеджио и я король местных земель."
+  },
+  "step_2": {
+    "input_required": true,
+    "message": "Выберите класс персонажа:\n1) Воин\n2) Лучник\n3) Маг",
+    "validators": ["int_required", "class_type_limit"],
+    "attribute": "character.class_type"
+  },
+  "step_3": {
+    "input_required": true,
+    "message": "Выберите пол персонажа:\n1) Мужчина\n2) Женщина",
+    "validators": ["int_required", "gender_limit"],
+    "attribute": "character.gender"
+  }
+}

@@ -1,0 +1,2 @@
+class ScenarioFinished(Exception):
+    pass

@@ -1,6 +1,6 @@
 from random import randint, choice
 
-from Game.weapon_quality import rare, improved
+from game.weapon_quality import rare, improved
 from base_classes import Weapons
 
 class BaseWeapon(Weapons):
